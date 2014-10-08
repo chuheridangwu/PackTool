@@ -7,24 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25279C1619E3894800E90E1F /* 10001.plist */; };
+		25279C1B19E38E2400E90E1F /* IpaPlistFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1A19E38E2400E90E1F /* IpaPlistFactory.m */; };
+		25279C1F19E3999900E90E1F /* Xcodebuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1E19E3999900E90E1F /* Xcodebuild.m */; };
+		2563393D19E2767900C4DD35 /* PlistConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563393C19E2767800C4DD35 /* PlistConfig.m */; };
+		2563394019E276BD00C4DD35 /* ConfigEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563393F19E276BD00C4DD35 /* ConfigEntity.m */; };
 		258701CB19E223580091103B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701CA19E223580091103B /* main.m */; };
+		258701D719E2255E0091103B /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701D619E2255E0091103B /* Path.m */; };
+		258701DA19E22B0C0091103B /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701D919E22B0C0091103B /* Config.m */; };
+		258701E219E233D80091103B /* CustomConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701E119E233D80091103B /* CustomConfig.m */; };
+		2587021719E242E30091103B /* ProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021619E242E30091103B /* ProjectConfig.m */; };
+		2587021A19E2446A0091103B /* CertificateParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021919E2446A0091103B /* CertificateParse.m */; };
+		2587021E19E249640091103B /* TxtparseOBJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021D19E249640091103B /* TxtparseOBJ.m */; };
+		2587022B19E2695D0091103B /* Certificate in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2587022A19E2693D0091103B /* Certificate */; };
+		25FB146E19E29502006E2079 /* customMade in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25FB146D19E283E6006E2079 /* customMade */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		258701C519E223580091103B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */,
+				25FB146E19E29502006E2079 /* customMade in CopyFiles */,
+				2587022B19E2695D0091103B /* Certificate in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25279C1619E3894800E90E1F /* 10001.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 10001.plist; sourceTree = "<group>"; };
+		25279C1919E38E2400E90E1F /* IpaPlistFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpaPlistFactory.h; sourceTree = "<group>"; };
+		25279C1A19E38E2400E90E1F /* IpaPlistFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpaPlistFactory.m; sourceTree = "<group>"; };
+		25279C1D19E3999900E90E1F /* Xcodebuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xcodebuild.h; sourceTree = "<group>"; };
+		25279C1E19E3999900E90E1F /* Xcodebuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xcodebuild.m; sourceTree = "<group>"; };
+		2563393519E275F200C4DD35 /* CustomFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFilePath.h; sourceTree = "<group>"; };
+		2563393B19E2767800C4DD35 /* PlistConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistConfig.h; sourceTree = "<group>"; };
+		2563393C19E2767800C4DD35 /* PlistConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistConfig.m; sourceTree = "<group>"; };
+		2563393E19E276BD00C4DD35 /* ConfigEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigEntity.h; sourceTree = "<group>"; };
+		2563393F19E276BD00C4DD35 /* ConfigEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigEntity.m; sourceTree = "<group>"; };
 		258701C719E223580091103B /* PacketTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PacketTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		258701CA19E223580091103B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		258701D519E2255E0091103B /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		258701D619E2255E0091103B /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
+		258701D819E22B0C0091103B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		258701D919E22B0C0091103B /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		258701E019E233D80091103B /* CustomConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomConfig.h; sourceTree = "<group>"; };
+		258701E119E233D80091103B /* CustomConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomConfig.m; sourceTree = "<group>"; };
+		2587021519E242E30091103B /* ProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectConfig.h; sourceTree = "<group>"; };
+		2587021619E242E30091103B /* ProjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectConfig.m; sourceTree = "<group>"; };
+		2587021819E2446A0091103B /* CertificateParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateParse.h; sourceTree = "<group>"; };
+		2587021919E2446A0091103B /* CertificateParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateParse.m; sourceTree = "<group>"; };
+		2587021C19E249640091103B /* TxtparseOBJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TxtparseOBJ.h; sourceTree = "<group>"; };
+		2587021D19E249640091103B /* TxtparseOBJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TxtparseOBJ.m; sourceTree = "<group>"; };
+		2587022A19E2693D0091103B /* Certificate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Certificate; sourceTree = "<group>"; };
+		25FB146D19E283E6006E2079 /* customMade */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customMade; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +78,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25279C1819E38E0D00E90E1F /* IpaPlist */ = {
+			isa = PBXGroup;
+			children = (
+				25279C1919E38E2400E90E1F /* IpaPlistFactory.h */,
+				25279C1A19E38E2400E90E1F /* IpaPlistFactory.m */,
+			);
+			name = IpaPlist;
+			sourceTree = "<group>";
+		};
+		25279C1C19E3996900E90E1F /* Xcodebuild */ = {
+			isa = PBXGroup;
+			children = (
+				25279C1D19E3999900E90E1F /* Xcodebuild.h */,
+				25279C1E19E3999900E90E1F /* Xcodebuild.m */,
+			);
+			name = Xcodebuild;
+			sourceTree = "<group>";
+		};
+		2563393419E275F200C4DD35 /* CustomMade */ = {
+			isa = PBXGroup;
+			children = (
+				2563393519E275F200C4DD35 /* CustomFilePath.h */,
+				25FB146D19E283E6006E2079 /* customMade */,
+			);
+			path = CustomMade;
+			sourceTree = "<group>";
+		};
+		2563393619E2760C00C4DD35 /* Certificate */ = {
+			isa = PBXGroup;
+			children = (
+				2587021C19E249640091103B /* TxtparseOBJ.h */,
+				2587021D19E249640091103B /* TxtparseOBJ.m */,
+				2587021819E2446A0091103B /* CertificateParse.h */,
+				2587021919E2446A0091103B /* CertificateParse.m */,
+				2587021519E242E30091103B /* ProjectConfig.h */,
+				2587021619E242E30091103B /* ProjectConfig.m */,
+			);
+			name = Certificate;
+			sourceTree = "<group>";
+		};
+		2563393719E2765600C4DD35 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				2563393B19E2767800C4DD35 /* PlistConfig.h */,
+				2563393C19E2767800C4DD35 /* PlistConfig.m */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
 		258701BE19E223580091103B = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +147,39 @@
 			isa = PBXGroup;
 			children = (
 				258701CA19E223580091103B /* main.m */,
+				2563393419E275F200C4DD35 /* CustomMade */,
+				258701DB19E22B850091103B /* Config */,
 			);
 			path = PacketTool;
+			sourceTree = "<group>";
+		};
+		258701DB19E22B850091103B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				25279C1619E3894800E90E1F /* 10001.plist */,
+				2587022A19E2693D0091103B /* Certificate */,
+				258701D519E2255E0091103B /* Path.h */,
+				258701D619E2255E0091103B /* Path.m */,
+				2563393E19E276BD00C4DD35 /* ConfigEntity.h */,
+				2563393F19E276BD00C4DD35 /* ConfigEntity.m */,
+				258701D819E22B0C0091103B /* Config.h */,
+				258701D919E22B0C0091103B /* Config.m */,
+				25279C1C19E3996900E90E1F /* Xcodebuild */,
+				25279C1819E38E0D00E90E1F /* IpaPlist */,
+				2563393719E2765600C4DD35 /* Plist */,
+				2563393619E2760C00C4DD35 /* Certificate */,
+				258701DC19E22CDD0091103B /* CustomMde */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		258701DC19E22CDD0091103B /* CustomMde */ = {
+			isa = PBXGroup;
+			children = (
+				258701E019E233D80091103B /* CustomConfig.h */,
+				258701E119E233D80091103B /* CustomConfig.m */,
+			);
+			name = CustomMde;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +238,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2563393D19E2767900C4DD35 /* PlistConfig.m in Sources */,
+				25279C1F19E3999900E90E1F /* Xcodebuild.m in Sources */,
+				2587021A19E2446A0091103B /* CertificateParse.m in Sources */,
+				258701E219E233D80091103B /* CustomConfig.m in Sources */,
+				258701D719E2255E0091103B /* Path.m in Sources */,
+				258701DA19E22B0C0091103B /* Config.m in Sources */,
 				258701CB19E223580091103B /* main.m in Sources */,
+				2587021E19E249640091103B /* TxtparseOBJ.m in Sources */,
+				25279C1B19E38E2400E90E1F /* IpaPlistFactory.m in Sources */,
+				2563394019E276BD00C4DD35 /* ConfigEntity.m in Sources */,
+				2587021719E242E30091103B /* ProjectConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +262,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -172,7 +302,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -232,6 +362,7 @@
 				258701D019E223580091103B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
