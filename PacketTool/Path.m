@@ -35,10 +35,8 @@
 }
 
 //icon的位置
-+ (NSString*)iconFilePathIn:(NSString*)projectPath{
++ (NSString*)iconDirPathIn:(NSString*)projectPath;{
     NSString *path = [projectPath stringByAppendingPathComponent:@"Woxin2.0/Resource/iconsLauchs"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSAssert([fileManager fileExistsAtPath:path], @"无效的地址");
     return path;
 }
 

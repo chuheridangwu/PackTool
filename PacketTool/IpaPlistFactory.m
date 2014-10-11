@@ -42,7 +42,8 @@
 }
 
 - (NSString *)ipaURL:(ConfigEntity*)entity{
-	NSString *url = [@"http://yun.67call.com/Ios/" stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.ipa",(int)entity.merchantID]];
+	NSString *rootURL = @"http://oldyun.67call.com/Ios/";
+	NSString *url = [NSString stringWithFormat:@"%@%d.ipa",rootURL,(int)entity.merchantID];
 	return url;
 }
 

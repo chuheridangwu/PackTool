@@ -11,6 +11,7 @@
 #import "PlistConfig.h"
 #import "ProjectConfig.h"
 #import "CustomConfig.h"
+#import "IconConfig.h"
 #import "TxtparseOBJ.h"
 
 enum{
@@ -27,6 +28,7 @@ enum{
 + (void)config:(ConfigEntity*)entity{
 	[ProjectConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withConfigEntity:entity];
 	[PlistConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withEntity:entity];
+	[IconConfig configIconAtPath:D_CODE_SOURCE_PROJECT_DIR_PATH configEntity:entity];
     [CustomConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withEntity:entity];
 }
 
