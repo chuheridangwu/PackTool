@@ -53,8 +53,12 @@
 }
 
 + (NSString*)ipaAppPathAt:(NSString*)ipasPath itemEntity:(ConfigEntity*)entity{
-	NSString *direct = [self ipaDirPathAt:ipasPath itemEntity:entity];
-	NSString *path = [direct stringByAppendingPathComponent:@"build"];
+	NSString *direct = [ipasPath stringByAppendingPathComponent:@"AppBuild"];
+	NSString *path = [direct stringByAppendingPathComponent:entity.merchantName];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath:path]){
+		[fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+	}
 	return path;
 }
 

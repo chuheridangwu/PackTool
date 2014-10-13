@@ -37,7 +37,6 @@ enum{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"customMade" ofType:nil];
     NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
     NSArray *certificateDatas = [TxtparseOBJ parseDataFrom:string itemSeparator:@"\n" elementSeparator:@"\t"];
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     for (NSArray *comps in certificateDatas) {
         NSInteger cmpCounts = [comps count];
         NSAssert(cmpCounts >= E_ConfigIndex_Version && cmpCounts <= E_ConfigIndex_Invalid, @"解析错误或者数据有错 %@",comps);
@@ -65,8 +64,7 @@ enum{
 		NSLog(@"版本号为:%@",version);
         [configList addObject:entity];
     }
-    [pool drain];
-    
+	
     return configList;
 }
 

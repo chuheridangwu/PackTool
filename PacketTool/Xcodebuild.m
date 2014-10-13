@@ -25,7 +25,9 @@
 	NSString *shell = [NSString stringWithFormat:@"%@\n %@\n %@\n %@\n",cd,clean,build,run];
 	system([shell cStringUsingEncoding:NSUTF8StringEncoding]);
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	[fileManager moveItemAtPath:dsmPath toPath:[Path ipaAppPathAt:D_IPAS_DIR_PATH itemEntity:configEntity] error:nil];
+	NSString *appBuildPath = [Path ipaAppPathAt:D_IPAS_DIR_PATH itemEntity:configEntity];
+	appBuildPath = [appBuildPath stringByAppendingPathComponent:@"build"];
+	[fileManager moveItemAtPath:dsmPath toPath:appBuildPath error:nil];
 }
 
 @end
