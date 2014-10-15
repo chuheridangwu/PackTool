@@ -15,7 +15,6 @@
 	[_ipaName release];
     [_version release];
     [_appURL release];
-	[_ipaName release];
 	[_bundleID release];
     [super dealloc];
 }

@@ -40,6 +40,13 @@
     return path;
 }
 
+//二维码文件位置
++ (NSString*)dbarcodePath:(NSString *)projectPath{
+	NSString *path = [projectPath stringByAppendingPathComponent:@"Woxin2.0/Resource/iconsLauchs"];
+	NSString *filePath = [path stringByAppendingPathComponent:@"TwoDimension@2x.png"];
+	return filePath;
+}
+
 + (NSString*)ipaDirPathAt:(NSString*)ipasPath itemEntity:(ConfigEntity*)entity{
 	NSString *path = [ipasPath stringByAppendingPathComponent:entity.merchantName];
 	return path;

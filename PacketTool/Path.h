@@ -16,6 +16,7 @@
 + (NSString*)customConfigPathIn:(NSString*)projectPath;
 + (NSString*)certificatePathIn:(NSString*)projectPath;
 + (NSString*)iconDirPathIn:(NSString*)projectPath;
++ (NSString*)dbarcodePath:(NSString *)projectPath;
 
 #pragma mark 打包后的ipa以及plist的路径
 + (NSString*)ipaDirPathAt:(NSString*)ipasPath itemEntity:(ConfigEntity*)entity;

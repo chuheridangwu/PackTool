@@ -10,6 +10,7 @@
 		25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25279C1619E3894800E90E1F /* 10001.plist */; };
 		25279C1B19E38E2400E90E1F /* IpaPlistFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1A19E38E2400E90E1F /* IpaPlistFactory.m */; };
 		25279C1F19E3999900E90E1F /* Xcodebuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1E19E3999900E90E1F /* Xcodebuild.m */; };
+		255F118419ED1FE800B29A45 /* DBarcodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 255F118319ED1FE800B29A45 /* DBarcodeConfig.m */; };
 		2563393D19E2767900C4DD35 /* PlistConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563393C19E2767800C4DD35 /* PlistConfig.m */; };
 		2563394019E276BD00C4DD35 /* ConfigEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563393F19E276BD00C4DD35 /* ConfigEntity.m */; };
 		258701CB19E223580091103B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701CA19E223580091103B /* main.m */; };
@@ -59,6 +60,8 @@
 		25279C1A19E38E2400E90E1F /* IpaPlistFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpaPlistFactory.m; sourceTree = "<group>"; };
 		25279C1D19E3999900E90E1F /* Xcodebuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xcodebuild.h; sourceTree = "<group>"; };
 		25279C1E19E3999900E90E1F /* Xcodebuild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xcodebuild.m; sourceTree = "<group>"; };
+		255F118219ED1FE800B29A45 /* DBarcodeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBarcodeConfig.h; sourceTree = "<group>"; };
+		255F118319ED1FE800B29A45 /* DBarcodeConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBarcodeConfig.m; sourceTree = "<group>"; };
 		2563393519E275F200C4DD35 /* CustomFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFilePath.h; sourceTree = "<group>"; };
 		2563393B19E2767800C4DD35 /* PlistConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistConfig.h; sourceTree = "<group>"; };
 		2563393C19E2767800C4DD35 /* PlistConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistConfig.m; sourceTree = "<group>"; };
@@ -118,6 +121,15 @@
 				25279C1E19E3999900E90E1F /* Xcodebuild.m */,
 			);
 			name = Xcodebuild;
+			sourceTree = "<group>";
+		};
+		255F118119ED1FCB00B29A45 /* DBarcode */ = {
+			isa = PBXGroup;
+			children = (
+				255F118219ED1FE800B29A45 /* DBarcodeConfig.h */,
+				255F118319ED1FE800B29A45 /* DBarcodeConfig.m */,
+			);
+			name = DBarcode;
 			sourceTree = "<group>";
 		};
 		2563393419E275F200C4DD35 /* CustomMade */ = {
@@ -189,6 +201,7 @@
 				2563393F19E276BD00C4DD35 /* ConfigEntity.m */,
 				258701D819E22B0C0091103B /* Config.h */,
 				258701D919E22B0C0091103B /* Config.m */,
+				255F118119ED1FCB00B29A45 /* DBarcode */,
 				25A7EE7E19E4DFB3006C8F6E /* Icon */,
 				25279C1C19E3996900E90E1F /* Xcodebuild */,
 				25279C1819E38E0D00E90E1F /* IpaPlist */,
@@ -297,6 +310,7 @@
 				258701CB19E223580091103B /* main.m in Sources */,
 				2587021E19E249640091103B /* TxtparseOBJ.m in Sources */,
 				25279C1B19E38E2400E90E1F /* IpaPlistFactory.m in Sources */,
+				255F118419ED1FE800B29A45 /* DBarcodeConfig.m in Sources */,
 				2563394019E276BD00C4DD35 /* ConfigEntity.m in Sources */,
 				2587021719E242E30091103B /* ProjectConfig.m in Sources */,
 			);

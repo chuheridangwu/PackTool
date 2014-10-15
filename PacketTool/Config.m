@@ -12,6 +12,7 @@
 #import "ProjectConfig.h"
 #import "CustomConfig.h"
 #import "IconConfig.h"
+#import "DBarcodeConfig.h"
 #import "TxtparseOBJ.h"
 
 enum{
@@ -29,6 +30,7 @@ enum{
 	[ProjectConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withConfigEntity:entity];
 	[PlistConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withEntity:entity];
 	[IconConfig configIconAtPath:D_CODE_SOURCE_PROJECT_DIR_PATH configEntity:entity];
+	[DBarcodeConfig configDBarcode:D_CODE_SOURCE_PROJECT_DIR_PATH configEntity:entity];
     [CustomConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withEntity:entity];
 }
 
