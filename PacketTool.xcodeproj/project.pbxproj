@@ -20,6 +20,8 @@
 		2568EF151A09D60100CDE884 /* Icon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0E1A09D5F700CDE884 /* Icon.png */; };
 		2568EF161A09D60100CDE884 /* Icon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0F1A09D5F700CDE884 /* Icon@2x.png */; };
 		2568EF171A09D60100CDE884 /* iTunesArtWork.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF101A09D5F700CDE884 /* iTunesArtWork.png */; };
+		2568EF191A0A09FD00CDE884 /* publicAppMade in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF181A0A09EB00CDE884 /* publicAppMade */; };
+		2568EF1D1A0A0B9400CDE884 /* AppPublicEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2568EF1C1A0A0B9400CDE884 /* AppPublicEntity.m */; };
 		258701CB19E223580091103B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701CA19E223580091103B /* main.m */; };
 		258701D719E2255E0091103B /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701D619E2255E0091103B /* Path.m */; };
 		258701DA19E22B0C0091103B /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701D919E22B0C0091103B /* Config.m */; };
@@ -39,6 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				2568EF191A0A09FD00CDE884 /* publicAppMade in CopyFiles */,
 				2568EF111A09D60100CDE884 /* Icon-72.png in CopyFiles */,
 				2568EF121A09D60100CDE884 /* Icon-Small-50.png in CopyFiles */,
 				2568EF131A09D60100CDE884 /* Icon-Small.png in CopyFiles */,
@@ -74,6 +77,9 @@
 		2568EF0E1A09D5F700CDE884 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2568EF0F1A09D5F700CDE884 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2568EF101A09D5F700CDE884 /* iTunesArtWork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtWork.png; sourceTree = "<group>"; };
+		2568EF181A0A09EB00CDE884 /* publicAppMade */ = {isa = PBXFileReference; lastKnownFileType = text; path = publicAppMade; sourceTree = "<group>"; };
+		2568EF1B1A0A0B9400CDE884 /* AppPublicEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPublicEntity.h; sourceTree = "<group>"; };
+		2568EF1C1A0A0B9400CDE884 /* AppPublicEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPublicEntity.m; sourceTree = "<group>"; };
 		258701C719E223580091103B /* PacketTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PacketTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		258701CA19E223580091103B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		258701D519E2255E0091103B /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			children = (
 				2563393519E275F200C4DD35 /* CustomFilePath.h */,
 				25FB146D19E283E6006E2079 /* customMade */,
+				2568EF181A0A09EB00CDE884 /* publicAppMade */,
 			);
 			path = CustomMade;
 			sourceTree = "<group>";
@@ -175,6 +182,17 @@
 				2563393C19E2767800C4DD35 /* PlistConfig.m */,
 			);
 			name = Plist;
+			sourceTree = "<group>";
+		};
+		2568EF1A1A0A0B7800CDE884 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2563393E19E276BD00C4DD35 /* ConfigEntity.h */,
+				2563393F19E276BD00C4DD35 /* ConfigEntity.m */,
+				2568EF1B1A0A0B9400CDE884 /* AppPublicEntity.h */,
+				2568EF1C1A0A0B9400CDE884 /* AppPublicEntity.m */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		258701BE19E223580091103B = {
@@ -211,8 +229,7 @@
 				2587022A19E2693D0091103B /* Certificate */,
 				258701D519E2255E0091103B /* Path.h */,
 				258701D619E2255E0091103B /* Path.m */,
-				2563393E19E276BD00C4DD35 /* ConfigEntity.h */,
-				2563393F19E276BD00C4DD35 /* ConfigEntity.m */,
+				2568EF1A1A0A0B7800CDE884 /* Entity */,
 				258701D819E22B0C0091103B /* Config.h */,
 				258701D919E22B0C0091103B /* Config.m */,
 				255F118119ED1FCB00B29A45 /* DBarcode */,
@@ -309,6 +326,7 @@
 				25A7EE8119E4DFD6006C8F6E /* IconConfig.m in Sources */,
 				258701CB19E223580091103B /* main.m in Sources */,
 				2587021E19E249640091103B /* TxtparseOBJ.m in Sources */,
+				2568EF1D1A0A0B9400CDE884 /* AppPublicEntity.m in Sources */,
 				25279C1B19E38E2400E90E1F /* IpaPlistFactory.m in Sources */,
 				255F118419ED1FE800B29A45 /* DBarcodeConfig.m in Sources */,
 				2563394019E276BD00C4DD35 /* ConfigEntity.m in Sources */,

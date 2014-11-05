@@ -20,6 +20,6 @@
 //此为必须设置的选项
 #define D_IPAS_DIR_PATH @"/Users/Elty/Desktop/IPAS" // 所有Ipa包存放的位置
 //如果配置文件中设置了版本号则以配置里面的版本号为准
-#define D_IPA_DEFAULT_ALL_VERSION @"2.1.11.0" //默认的版本号
+#define D_IPA_DEFAULT_ALL_VERSION @"2.1.18.0" //默认的版本号
 
 #endif

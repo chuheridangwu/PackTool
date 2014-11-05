@@ -14,14 +14,25 @@
 #import "IconConfig.h"
 #import "DBarcodeConfig.h"
 #import "TxtparseOBJ.h"
+#import "AppPublicEntity.h"
 
 enum{
-    E_ConfigIndex_Name = 0,
-    E_ConfigIndex_ID,
-	E_ConfigIndex_IpaName,
-    E_ConfigIndex_Version,
+    E_ConfigIndex_Name = 0,//商家名称
+    E_ConfigIndex_ID,//商家ID
+	E_ConfigIndex_IpaName,//app的名称
+	E_ConfigIndex_AppCategory,//App分类
+    E_ConfigIndex_Version,//版本号
     
     E_ConfigIndex_Invalid,
+};
+
+enum{
+	E_PublicAppConfigIndex_Name = 0,//商家名称
+	E_PublicAppConfigIndex_ID,//商家ID
+	E_PublicAppConfigIndex_AreaID,//区域ID
+	E_PublicAppConfigIndex_SubShopID,//分店ID
+	
+	E_PublicAppConfigIndex_Invalid,
 };
 
 @implementation Config
@@ -34,40 +45,83 @@ enum{
     [CustomConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withEntity:entity];
 }
 
-+ (NSArray*)loadConfigEntityList{
-    NSMutableArray *configList = [NSMutableArray array];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"customMade" ofType:nil];
-    NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-    NSArray *certificateDatas = [TxtparseOBJ parseDataFrom:string itemSeparator:@"\n" elementSeparator:@"\t"];
-    for (NSArray *comps in certificateDatas) {
-        NSInteger cmpCounts = [comps count];
-        NSAssert(cmpCounts >= E_ConfigIndex_Version && cmpCounts <= E_ConfigIndex_Invalid, @"解析错误或者数据有错 %@",comps);
-        NSString *name = [comps objectAtIndex:E_ConfigIndex_Name];
++ (NSArray*)loadPublicEntityList{
+	NSMutableArray *publicConfigList = [NSMutableArray array];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"publicAppMade" ofType:nil];
+	NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+	NSArray *configDatas = [TxtparseOBJ parseDataFrom:string itemSeparator:@"\n" elementSeparator:@"\t"];
+	for (NSArray *comps in configDatas) {
+		NSInteger cmpCounts = [comps count];
+		NSAssert(cmpCounts == E_PublicAppConfigIndex_Invalid, @"解析错误或者数据有错 %@",comps);
+		NSString *merchantName = [comps objectAtIndex:E_PublicAppConfigIndex_Name];
+		NSInteger merchantID = [[comps objectAtIndex:E_PublicAppConfigIndex_ID] integerValue];
+		NSInteger areaID = [[comps objectAtIndex:E_PublicAppConfigIndex_AreaID] integerValue];
+		NSInteger subShopID = [[comps objectAtIndex:E_PublicAppConfigIndex_SubShopID] integerValue];
+		AppPublicEntity *entity = [[[AppPublicEntity alloc] init] autorelease];
+		[entity setMerchantName:merchantName];
+		[entity setMerchantID:merchantID];
+		[entity setAreaID:areaID];
+		[entity setSubShopID:subShopID];
+		[publicConfigList addObject:entity];
+	}
+	return publicConfigList;
+}
+
++ (NSArray*)loadMainConfigEntityList{
+	NSMutableArray *configList = [NSMutableArray array];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"customMade" ofType:nil];
+	NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+	NSArray *configDatas = [TxtparseOBJ parseDataFrom:string itemSeparator:@"\n" elementSeparator:@"\t"];
+	for (NSArray *comps in configDatas) {
+		NSInteger cmpCounts = [comps count];
+		NSAssert(cmpCounts == E_ConfigIndex_Invalid, @"解析错误或者数据有错 %@",comps);
+		NSString *name = [comps objectAtIndex:E_ConfigIndex_Name];
 		if([name hasPrefix:@"//"]){
 			continue;
 		}
 		
-        NSInteger merchantID = [[comps objectAtIndex:E_ConfigIndex_ID] integerValue];
+		NSInteger merchantID = [[comps objectAtIndex:E_ConfigIndex_ID] integerValue];
 		NSString *ipaName = [comps objectAtIndex:E_ConfigIndex_IpaName];
-        
-        ConfigEntity *entity = [[[ConfigEntity alloc] init] autorelease];
-        [entity setMerchantName:name];
-        [entity setMerchantID:merchantID];
+		E_App_Category appCategory = [[comps objectAtIndex:E_ConfigIndex_AppCategory] intValue];
+		
+		ConfigEntity *entity = [[[ConfigEntity alloc] init] autorelease];
+		[entity setMerchantName:name];
+		[entity setMerchantID:merchantID];
 		[entity setIpaName:ipaName];
-        NSLog(@"商家名称=%@ 商家ID=%d ipa名称为:%@",name,(int)merchantID,ipaName);
-		NSString *version = D_IPA_DEFAULT_ALL_VERSION;
-        if(cmpCounts == E_ConfigIndex_Invalid){
-            NSString *aVersion = [comps objectAtIndex:E_ConfigIndex_Version];
-			if (![self isVersionEmpty:aVersion]){
-				version = aVersion;
-			}
-        }
+		[entity setAppCategory:appCategory];
+		NSLog(@"商家名称=%@ 商家ID=%d ipa名称为:%@",name,(int)merchantID,ipaName);
+		NSString *version = [comps objectAtIndex:E_ConfigIndex_Version];
+		if (![self isVersionEmpty:version]){
+			version = D_IPA_DEFAULT_ALL_VERSION;
+		}
 		[entity setVersion:version];
 		NSLog(@"版本号为:%@",version);
-        [configList addObject:entity];
-    }
+		
+		[configList addObject:entity];
+	}
+	return configList;
+}
+
++ (NSArray*)loadConfigEntityList{
+	NSArray *mainConfigList = [self loadMainConfigEntityList];
+	NSArray *publicAppList = [self loadPublicEntityList];
 	
-    return configList;
+	for (ConfigEntity *entity in mainConfigList){
+		E_App_Category category = entity.appCategory;
+		if (category == E_App_Category_Public){
+			AppPublicEntity *aPublicEntity = nil;
+			for (AppPublicEntity *publicEntity in publicAppList){
+				if (publicEntity.merchantID == entity.merchantID){
+					aPublicEntity = publicEntity;
+					break;
+				}
+			}
+			NSAssert(aPublicEntity!=nil, @"没有找到公众版 id=%d的配置",(int)entity.merchantID);
+			[entity setSubShopID:aPublicEntity.subShopID];
+			[entity setAreaID:aPublicEntity.areaID];
+		}
+	}
+	return mainConfigList;
 }
 
 + (BOOL)isVersionEmpty:(NSString*)version{
@@ -75,14 +129,10 @@ enum{
 		return YES;
 	}
 	
-	NSInteger len = version.length;
-	for (int index = 0; index < len; index++){
-		char ch = [version characterAtIndex:index];
-		if (ch != ' ' && ch != '	'){
-			return NO;
-		}
+	if ([version hasPrefix:@"-"]){
+		return YES;
 	}
-	return YES;
+	return NO;
 }
 
 @end
