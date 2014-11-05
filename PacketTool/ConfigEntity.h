@@ -20,6 +20,7 @@ typedef enum {
 @property (nonatomic,retain)NSString *version;//版本号
 @property (nonatomic,retain)NSString *appURL;//app的地址
 @property (nonatomic,retain)NSString *bundleID;//bundleID
+@property (nonatomic,assign)BOOL isServerUseOldAddress;//是否使用老地址~
 
 @property (nonatomic,assign)E_App_Category appCategory;//app 分类
 @property (nonatomic,assign)NSInteger areaID; //区域ID

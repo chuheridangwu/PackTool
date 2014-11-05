@@ -22,7 +22,7 @@ enum{
 	E_ConfigIndex_IpaName,//app的名称
 	E_ConfigIndex_AppCategory,//App分类
     E_ConfigIndex_Version,//版本号
-    
+    E_ConfigIndex_IsServerUseOldAddress,//是否使用老的服务器地址~
     E_ConfigIndex_Invalid,
 };
 
@@ -91,6 +91,8 @@ enum{
 		[entity setAppCategory:appCategory];
 		NSLog(@"商家名称=%@ 商家ID=%d ipa名称为:%@",name,(int)merchantID,ipaName);
 		NSString *version = [comps objectAtIndex:E_ConfigIndex_Version];
+		NSInteger useOld = [[comps objectAtIndex:E_ConfigIndex_IsServerUseOldAddress] integerValue];
+		[entity setIsServerUseOldAddress:useOld==1];
 		if (![self isVersionEmpty:version]){
 			version = D_IPA_DEFAULT_ALL_VERSION;
 		}
