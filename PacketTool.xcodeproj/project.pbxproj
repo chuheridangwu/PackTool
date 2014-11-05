@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25279C1619E3894800E90E1F /* 10001.plist */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25279C1619E3894800E90E1F /* 10001.plist */; };
 		25279C1B19E38E2400E90E1F /* IpaPlistFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1A19E38E2400E90E1F /* IpaPlistFactory.m */; };
 		25279C1F19E3999900E90E1F /* Xcodebuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1E19E3999900E90E1F /* Xcodebuild.m */; };
 		255F118419ED1FE800B29A45 /* DBarcodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 255F118319ED1FE800B29A45 /* DBarcodeConfig.m */; };
 		2563393D19E2767900C4DD35 /* PlistConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563393C19E2767800C4DD35 /* PlistConfig.m */; };
 		2563394019E276BD00C4DD35 /* ConfigEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563393F19E276BD00C4DD35 /* ConfigEntity.m */; };
+		2568EF111A09D60100CDE884 /* Icon-72.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0A1A09D5F700CDE884 /* Icon-72.png */; };
+		2568EF121A09D60100CDE884 /* Icon-Small-50.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0B1A09D5F700CDE884 /* Icon-Small-50.png */; };
+		2568EF131A09D60100CDE884 /* Icon-Small.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0C1A09D5F700CDE884 /* Icon-Small.png */; };
+		2568EF141A09D60100CDE884 /* Icon-Small@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0D1A09D5F700CDE884 /* Icon-Small@2x.png */; };
+		2568EF151A09D60100CDE884 /* Icon.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0E1A09D5F700CDE884 /* Icon.png */; };
+		2568EF161A09D60100CDE884 /* Icon@2x.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF0F1A09D5F700CDE884 /* Icon@2x.png */; };
+		2568EF171A09D60100CDE884 /* iTunesArtWork.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2568EF101A09D5F700CDE884 /* iTunesArtWork.png */; };
 		258701CB19E223580091103B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701CA19E223580091103B /* main.m */; };
 		258701D719E2255E0091103B /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701D619E2255E0091103B /* Path.m */; };
 		258701DA19E22B0C0091103B /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 258701D919E22B0C0091103B /* Config.m */; };
@@ -20,9 +27,9 @@
 		2587021719E242E30091103B /* ProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021619E242E30091103B /* ProjectConfig.m */; };
 		2587021A19E2446A0091103B /* CertificateParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021919E2446A0091103B /* CertificateParse.m */; };
 		2587021E19E249640091103B /* TxtparseOBJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021D19E249640091103B /* TxtparseOBJ.m */; };
-		2587022B19E2695D0091103B /* Certificate in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2587022A19E2693D0091103B /* Certificate */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2587022B19E2695D0091103B /* Certificate in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2587022A19E2693D0091103B /* Certificate */; };
 		25A7EE8119E4DFD6006C8F6E /* IconConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A7EE8019E4DFD6006C8F6E /* IconConfig.m */; };
-		25FB146E19E29502006E2079 /* customMade in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25FB146D19E283E6006E2079 /* customMade */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		25FB146E19E29502006E2079 /* customMade in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25FB146D19E283E6006E2079 /* customMade */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +39,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				2568EF111A09D60100CDE884 /* Icon-72.png in CopyFiles */,
+				2568EF121A09D60100CDE884 /* Icon-Small-50.png in CopyFiles */,
+				2568EF131A09D60100CDE884 /* Icon-Small.png in CopyFiles */,
+				2568EF141A09D60100CDE884 /* Icon-Small@2x.png in CopyFiles */,
+				2568EF151A09D60100CDE884 /* Icon.png in CopyFiles */,
+				2568EF161A09D60100CDE884 /* Icon@2x.png in CopyFiles */,
+				2568EF171A09D60100CDE884 /* iTunesArtWork.png in CopyFiles */,
 				25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */,
 				25FB146E19E29502006E2079 /* customMade in CopyFiles */,
 				2587022B19E2695D0091103B /* Certificate in CopyFiles */,
@@ -53,6 +67,13 @@
 		2563393C19E2767800C4DD35 /* PlistConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistConfig.m; sourceTree = "<group>"; };
 		2563393E19E276BD00C4DD35 /* ConfigEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigEntity.h; sourceTree = "<group>"; };
 		2563393F19E276BD00C4DD35 /* ConfigEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigEntity.m; sourceTree = "<group>"; };
+		2568EF0A1A09D5F700CDE884 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		2568EF0B1A09D5F700CDE884 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		2568EF0C1A09D5F700CDE884 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		2568EF0D1A09D5F700CDE884 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		2568EF0E1A09D5F700CDE884 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2568EF0F1A09D5F700CDE884 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		2568EF101A09D5F700CDE884 /* iTunesArtWork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtWork.png; sourceTree = "<group>"; };
 		258701C719E223580091103B /* PacketTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PacketTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		258701CA19E223580091103B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		258701D519E2255E0091103B /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
@@ -105,6 +126,13 @@
 		254834201A086C710035A2C2 /* DefaultIcon */ = {
 			isa = PBXGroup;
 			children = (
+				2568EF0A1A09D5F700CDE884 /* Icon-72.png */,
+				2568EF0B1A09D5F700CDE884 /* Icon-Small-50.png */,
+				2568EF0C1A09D5F700CDE884 /* Icon-Small.png */,
+				2568EF0D1A09D5F700CDE884 /* Icon-Small@2x.png */,
+				2568EF0E1A09D5F700CDE884 /* Icon.png */,
+				2568EF0F1A09D5F700CDE884 /* Icon@2x.png */,
+				2568EF101A09D5F700CDE884 /* iTunesArtWork.png */,
 			);
 			path = DefaultIcon;
 			sourceTree = "<group>";
