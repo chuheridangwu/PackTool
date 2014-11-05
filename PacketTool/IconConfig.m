@@ -17,12 +17,15 @@
 	NSString *thisIconPath = [D_ICON_DIR_PATH stringByAppendingPathComponent:[NSString stringWithFormat:@"%d",(int)merchantID]];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *iconSourcePath = [thisIconPath stringByAppendingPathComponent:@"*"];
+	NSString *iconDesPath = [Path iconDirPathIn:projectPath];
 	if(![fileManager fileExistsAtPath:thisIconPath]){
 		NSLog(@"商家=%d的icon缺失",(int)merchantID);
 		NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
 		iconSourcePath = [resourcePath stringByAppendingPathComponent:@"icon-*"];
+		//iTunesArtWorkPath
+		NSString *iTunesArtWorkPath = [resourcePath stringByAppendingString:@"iTunesArtWork.png"];
+		[NSString stringWithFormat:@"cp -f %@ %@",iTunesArtWorkPath,iconDesPath];
 	}
-	NSString *iconDesPath = [Path iconDirPathIn:projectPath];
 	NSString *moveItems = [NSString stringWithFormat:@"cp -f %@ %@",iconSourcePath,iconDesPath];
 	system([moveItems cStringUsingEncoding:NSUTF8StringEncoding]);
 }

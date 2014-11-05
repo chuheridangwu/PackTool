@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25279C1619E3894800E90E1F /* 10001.plist */; };
+		25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25279C1619E3894800E90E1F /* 10001.plist */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		25279C1B19E38E2400E90E1F /* IpaPlistFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1A19E38E2400E90E1F /* IpaPlistFactory.m */; };
 		25279C1F19E3999900E90E1F /* Xcodebuild.m in Sources */ = {isa = PBXBuildFile; fileRef = 25279C1E19E3999900E90E1F /* Xcodebuild.m */; };
 		255F118419ED1FE800B29A45 /* DBarcodeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 255F118319ED1FE800B29A45 /* DBarcodeConfig.m */; };
@@ -20,16 +20,9 @@
 		2587021719E242E30091103B /* ProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021619E242E30091103B /* ProjectConfig.m */; };
 		2587021A19E2446A0091103B /* CertificateParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021919E2446A0091103B /* CertificateParse.m */; };
 		2587021E19E249640091103B /* TxtparseOBJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2587021D19E249640091103B /* TxtparseOBJ.m */; };
-		2587022B19E2695D0091103B /* Certificate in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2587022A19E2693D0091103B /* Certificate */; };
+		2587022B19E2695D0091103B /* Certificate in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2587022A19E2693D0091103B /* Certificate */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		25A7EE8119E4DFD6006C8F6E /* IconConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A7EE8019E4DFD6006C8F6E /* IconConfig.m */; };
-		25A7EEA119E516FA006C8F6E /* icon-114.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25A7EE9A19E5164D006C8F6E /* icon-114.png */; };
-		25A7EEA219E516FA006C8F6E /* icon-29.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25A7EE9B19E5164D006C8F6E /* icon-29.png */; };
-		25A7EEA319E516FA006C8F6E /* icon-50.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25A7EE9C19E5164D006C8F6E /* icon-50.png */; };
-		25A7EEA419E516FA006C8F6E /* icon-512.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25A7EE9D19E5164D006C8F6E /* icon-512.png */; };
-		25A7EEA519E516FA006C8F6E /* icon-57.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25A7EE9E19E5164D006C8F6E /* icon-57.png */; };
-		25A7EEA619E516FA006C8F6E /* icon-58.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25A7EE9F19E5164D006C8F6E /* icon-58.png */; };
-		25A7EEA719E516FA006C8F6E /* icon-72.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25A7EEA019E5164D006C8F6E /* icon-72.png */; };
-		25FB146E19E29502006E2079 /* customMade in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25FB146D19E283E6006E2079 /* customMade */; };
+		25FB146E19E29502006E2079 /* customMade in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25FB146D19E283E6006E2079 /* customMade */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,13 +32,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				25A7EEA119E516FA006C8F6E /* icon-114.png in CopyFiles */,
-				25A7EEA219E516FA006C8F6E /* icon-29.png in CopyFiles */,
-				25A7EEA319E516FA006C8F6E /* icon-50.png in CopyFiles */,
-				25A7EEA419E516FA006C8F6E /* icon-512.png in CopyFiles */,
-				25A7EEA519E516FA006C8F6E /* icon-57.png in CopyFiles */,
-				25A7EEA619E516FA006C8F6E /* icon-58.png in CopyFiles */,
-				25A7EEA719E516FA006C8F6E /* icon-72.png in CopyFiles */,
 				25279C1719E3895100E90E1F /* 10001.plist in CopyFiles */,
 				25FB146E19E29502006E2079 /* customMade in CopyFiles */,
 				2587022B19E2695D0091103B /* Certificate in CopyFiles */,
@@ -84,13 +70,6 @@
 		2587022A19E2693D0091103B /* Certificate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Certificate; sourceTree = "<group>"; };
 		25A7EE7F19E4DFD6006C8F6E /* IconConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconConfig.h; sourceTree = "<group>"; };
 		25A7EE8019E4DFD6006C8F6E /* IconConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconConfig.m; sourceTree = "<group>"; };
-		25A7EE9A19E5164D006C8F6E /* icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114.png"; sourceTree = "<group>"; };
-		25A7EE9B19E5164D006C8F6E /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
-		25A7EE9C19E5164D006C8F6E /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50.png"; sourceTree = "<group>"; };
-		25A7EE9D19E5164D006C8F6E /* icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-512.png"; sourceTree = "<group>"; };
-		25A7EE9E19E5164D006C8F6E /* icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-57.png"; sourceTree = "<group>"; };
-		25A7EE9F19E5164D006C8F6E /* icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-58.png"; sourceTree = "<group>"; };
-		25A7EEA019E5164D006C8F6E /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		25FB146D19E283E6006E2079 /* customMade */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customMade; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +100,13 @@
 				25279C1E19E3999900E90E1F /* Xcodebuild.m */,
 			);
 			name = Xcodebuild;
+			sourceTree = "<group>";
+		};
+		254834201A086C710035A2C2 /* DefaultIcon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DefaultIcon;
 			sourceTree = "<group>";
 		};
 		255F118119ED1FCB00B29A45 /* DBarcode */ = {
@@ -192,7 +178,7 @@
 		258701DB19E22B850091103B /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				25A7EE9919E5164D006C8F6E /* DefaultIcon */,
+				254834201A086C710035A2C2 /* DefaultIcon */,
 				25279C1619E3894800E90E1F /* 10001.plist */,
 				2587022A19E2693D0091103B /* Certificate */,
 				258701D519E2255E0091103B /* Path.h */,
@@ -228,20 +214,6 @@
 				25A7EE8019E4DFD6006C8F6E /* IconConfig.m */,
 			);
 			name = Icon;
-			sourceTree = "<group>";
-		};
-		25A7EE9919E5164D006C8F6E /* DefaultIcon */ = {
-			isa = PBXGroup;
-			children = (
-				25A7EE9A19E5164D006C8F6E /* icon-114.png */,
-				25A7EE9B19E5164D006C8F6E /* icon-29.png */,
-				25A7EE9C19E5164D006C8F6E /* icon-50.png */,
-				25A7EE9D19E5164D006C8F6E /* icon-512.png */,
-				25A7EE9E19E5164D006C8F6E /* icon-57.png */,
-				25A7EE9F19E5164D006C8F6E /* icon-58.png */,
-				25A7EEA019E5164D006C8F6E /* icon-72.png */,
-			);
-			path = DefaultIcon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
