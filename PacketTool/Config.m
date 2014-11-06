@@ -93,7 +93,7 @@ enum{
 		NSString *version = [comps objectAtIndex:E_ConfigIndex_Version];
 		NSInteger useOld = [[comps objectAtIndex:E_ConfigIndex_IsServerUseOldAddress] integerValue];
 		[entity setIsServerUseOldAddress:useOld==1];
-		if (![self isVersionEmpty:version]){
+		if ([self isVersionEmpty:version]){
 			version = D_IPA_DEFAULT_ALL_VERSION;
 		}
 		[entity setVersion:version];
