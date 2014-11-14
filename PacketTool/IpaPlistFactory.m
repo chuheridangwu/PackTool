@@ -43,8 +43,8 @@
 
 - (NSString *)ipaURL:(ConfigEntity*)entity{
 	NSString *rootURL = @"http://yun.67call.com/Ios/";
-	if (entity.isServerUseOldAddress){
-		rootURL = @"http://web1.67call.com/Ios/";
+	if (!entity.isServerUseOldAddress){
+		rootURL = @"http://wxa.67call.com/Ios/";
 	}
 	NSString *url = [NSString stringWithFormat:@"%@%d.ipa",rootURL,(int)entity.merchantID];
 	return url;

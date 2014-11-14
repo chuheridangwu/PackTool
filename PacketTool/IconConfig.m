@@ -21,7 +21,7 @@
 	if(![fileManager fileExistsAtPath:thisIconPath]){
 		NSLog(@"商家=%d的icon缺失",(int)merchantID);
 		NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
-		iconSourcePath = [resourcePath stringByAppendingPathComponent:@"icon-*"];
+		iconSourcePath = [resourcePath stringByAppendingPathComponent:@"Icon-*"];
 		//iTunesArtWorkPath
 		NSString *iTunesArtWorkPath = [resourcePath stringByAppendingString:@"iTunesArtWork.png"];
 		[NSString stringWithFormat:@"cp -f %@ %@",iTunesArtWorkPath,iconDesPath];
