@@ -17,6 +17,18 @@
 #define D_KEY_APP_SUBSHOPID @"D_KEY_APP_SUBSHOPID" //分店ID
 #define D_KEY_APP_AREAID	@"D_KEY_APP_AREAID"	//区域ID
 
+#pragma mark 引导页
+#define D_KEY_APP_GUIDE @"D_KEY_APP_GUIDE"
+#define D_KEY_APP_GUIDE_ENABLE @"D_KEY_APP_GUIDE_ENABLE" //是否有引导页~
+#define D_KEY_APP_GUIDE_PAGE @"D_KEY_APP_GUIDE_PAGE" //引导页的页数~
+
+#pragma mark 注册和登录
+#define D_KEY_LOG_REG	@"D_KEY_LOG_REG"
+#define D_KEY_LOG_REG_BAG_ENABLE	@"D_KEY_LOG_REG_BAG_ENABLE"//注册和登录页面是否有背景图片~
+#define D_KEY_LOG_REG_E_COLOR	@"D_KEY_LOG_REG_E_COLOR" //注册和登录页面的颜色枚举~
+
+#define D_KEY_OTHER_COLOR @"D_KEY_OTHER_COLOR" //其他颜色的编号~
+
 @implementation CustomConfig
 
 + (void)configAt:(NSString*)projectPath withEntity:(ConfigEntity*)entity{
@@ -37,10 +49,16 @@
 	if (entity.appCategory == E_App_Category_Public){
 		[plistDic setObject:[NSNumber numberWithInteger:entity.subShopID] forKey:D_KEY_APP_SUBSHOPID];
 		[plistDic setObject:[NSNumber numberWithInteger:entity.areaID] forKey:D_KEY_APP_AREAID];
-	}else{
-		[plistDic removeObjectForKey:D_KEY_APP_SUBSHOPID];
-		[plistDic removeObjectForKey:D_KEY_APP_AREAID];
 	}
+	
+	[plistDic setObject:[NSNumber numberWithInteger:entity.otherColorIndex] forKey:D_KEY_OTHER_COLOR];
+	
+	NSDictionary *guideDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:entity.isGuideEnable],D_KEY_APP_GUIDE_ENABLE,[NSNumber numberWithInteger:entity.guidePage],D_KEY_APP_GUIDE_PAGE,nil];
+	[plistDic setObject:guideDic forKey:D_KEY_APP_GUIDE];
+	[NSNumber numberWithInteger:entity.logRegColorIndex];
+	NSDictionary *regLogDic = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:entity.isLogRegBGEnable],D_KEY_LOG_REG_BAG_ENABLE,[NSNumber numberWithInteger:entity.logRegColorIndex],D_KEY_LOG_REG_E_COLOR,nil];
+	[plistDic setObject:regLogDic forKey:D_KEY_LOG_REG];
+	
 	
     [plistDic writeToFile:customPlistPath atomically:NO];
 	

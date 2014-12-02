@@ -25,4 +25,10 @@ typedef enum {
 @property (nonatomic,assign)E_App_Category appCategory;//app 分类
 @property (nonatomic,assign)NSInteger areaID; //区域ID
 @property (nonatomic,assign)NSInteger subShopID; //分店ID
+
+@property (nonatomic,assign)BOOL isGuideEnable;
+@property (nonatomic,assign)NSInteger guidePage;//导航的页数
+@property (nonatomic,assign)BOOL isLogRegBGEnable;//注册和登录页面是否有背景图片~
+@property (nonatomic,assign)NSInteger logRegColorIndex;//注册和登录的颜色编号
+@property (nonatomic,assign)NSInteger otherColorIndex;//其他颜色编号
 @end

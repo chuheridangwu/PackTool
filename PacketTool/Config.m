@@ -12,7 +12,6 @@
 #import "ProjectConfig.h"
 #import "CustomConfig.h"
 #import "IconConfig.h"
-#import "DBarcodeConfig.h"
 #import "TxtparseOBJ.h"
 #import "AppPublicEntity.h"
 
@@ -21,8 +20,15 @@ enum{
     E_ConfigIndex_ID,//商家ID
 	E_ConfigIndex_IpaName,//app的名称
 	E_ConfigIndex_AppCategory,//App分类
-    E_ConfigIndex_Version,//版本号
     E_ConfigIndex_IsServerUseOldAddress,//是否使用老的服务器地址~
+	E_ConfigIndex_GuideEnable,//导航是否启动~
+	E_ConfigIndex_GuidePage,//导航的页数
+	E_ConfigIndex_LogRegBgEnable,//注册登录页面是否有背景图片~
+	E_ConfigIndex_LogRegColorIndex,//注册登录页面的颜色编号
+//	E_ConfigIndex_SideSliderBgEnable,//侧边栏是否有背景图片~
+//	E_ConfigIndex_SideSliderColorIndex,//侧边栏颜色编号 目前只有一种为0
+	E_ConfigIndex_OtherColorIndex,//其他的颜色编号
+	
     E_ConfigIndex_Invalid,
 };
 
@@ -41,7 +47,6 @@ enum{
 	[ProjectConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withConfigEntity:entity];
 	[PlistConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withEntity:entity];
 	[IconConfig configIconAtPath:D_CODE_SOURCE_PROJECT_DIR_PATH configEntity:entity];
-	[DBarcodeConfig configDBarcode:D_CODE_SOURCE_PROJECT_DIR_PATH configEntity:entity];
     [CustomConfig configAt:D_CODE_SOURCE_PROJECT_DIR_PATH withEntity:entity];
 }
 
@@ -90,15 +95,22 @@ enum{
 		[entity setIpaName:ipaName];
 		[entity setAppCategory:appCategory];
 		NSLog(@"商家名称=%@ 商家ID=%d ipa名称为:%@",name,(int)merchantID,ipaName);
-		NSString *version = [comps objectAtIndex:E_ConfigIndex_Version];
+		NSString *version = D_IPA_DEFAULT_ALL_VERSION;
 		NSInteger useOld = [[comps objectAtIndex:E_ConfigIndex_IsServerUseOldAddress] integerValue];
 		[entity setIsServerUseOldAddress:useOld==1];
-		if ([self isVersionEmpty:version]){
-			version = D_IPA_DEFAULT_ALL_VERSION;
-		}
 		[entity setVersion:version];
 		NSLog(@"版本号为:%@",version);
 		
+		BOOL isGuideEnable = [[comps objectAtIndex:E_ConfigIndex_GuideEnable] boolValue];
+		NSInteger guidePage = [[comps objectAtIndex:E_ConfigIndex_GuidePage] integerValue];
+		BOOL logRegBgEnable = [[comps objectAtIndex:E_ConfigIndex_LogRegBgEnable] boolValue];
+		NSInteger logRegColorIndex = [[comps objectAtIndex:E_ConfigIndex_LogRegColorIndex] integerValue];
+		NSInteger otherColorIndex = [[comps objectAtIndex:E_ConfigIndex_OtherColorIndex] integerValue];
+		[entity setIsGuideEnable:isGuideEnable];
+		[entity setGuidePage:guidePage];
+		[entity setIsLogRegBGEnable:logRegBgEnable];
+		[entity setLogRegColorIndex:logRegColorIndex];
+		[entity setOtherColorIndex:otherColorIndex];
 		[configList addObject:entity];
 	}
 	return configList;
@@ -125,16 +137,4 @@ enum{
 	}
 	return mainConfigList;
 }
-
-+ (BOOL)isVersionEmpty:(NSString*)version{
-	if (!version){
-		return YES;
-	}
-	
-	if ([version hasPrefix:@"-"]){
-		return YES;
-	}
-	return NO;
-}
-
 @end
