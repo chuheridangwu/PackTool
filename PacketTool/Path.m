@@ -69,7 +69,7 @@
 }
 
 + (NSString*)logRegIconFilePath:(NSString*)projectPath{
-	NSString *filePath = [projectPath stringByAppendingPathComponent:@"Woxin2.0/Resource/LoginAndRegister/loginW@2x.jpg"];
+	NSString *filePath = [projectPath stringByAppendingPathComponent:@"Woxin2.0/Resource/LoginAndRegister/loginW@2x.png"];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSAssert([fileManager fileExistsAtPath:filePath], @"无效的地址");
 	return filePath;
@@ -135,7 +135,7 @@
 #pragma mark 图片文件的源地址~
 + (NSString*)appIconPathAtSourcePathIn:(NSString*)picDirPath merchantID:(NSInteger)merchantID{
 	NSString *iconDir = [self iconSourceRootDirIn:picDirPath];
-	NSString *appIconDir = [iconDir stringByAppendingPathComponent:[NSString stringWithFormat:@"Icon/%d/Icon",(int)merchantID]];
+	NSString *appIconDir = [iconDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%d/Icon",(int)merchantID]];
 	return appIconDir;
 }
 + (NSString*)iconDirSourcePathIn:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity{
@@ -163,13 +163,13 @@
 
 + (NSString*)appFlashPathAtSourcePathIn:(NSString*)picDirPath merchantID:(NSInteger)merchantID{
 	NSString *iconDir = [self iconSourceRootDirIn:picDirPath];
-	NSString *appFlahDir = [iconDir stringByAppendingPathComponent:[NSString stringWithFormat:@"Icon/%d/Flash",(int)merchantID]];
+	NSString *appFlahDir = [iconDir stringByAppendingPathComponent:[NSString stringWithFormat:@"/%d/Flash",(int)merchantID]];
 	return appFlahDir;
 }
 
 + (NSString*)flashIconDirSourcePathIn:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity{
 	NSInteger merchantID = entity.merchantID;
-	NSString *appFlahDir = [self appIconPathAtSourcePathIn:picDirPath merchantID:merchantID];
+	NSString *appFlahDir = [self appFlashPathAtSourcePathIn:picDirPath merchantID:merchantID];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *dirPath = nil;
 	if ([fileManager fileExistsAtPath:appFlahDir]){
@@ -184,7 +184,6 @@
 				dirPath = [self appFlashPathAtSourcePathIn:picDirPath merchantID:10020];
 				break;
 		}
-		return nil;
 	}
 	NSAssert([fileManager fileExistsAtPath:dirPath], @"无效的地址");
 	return dirPath;
@@ -192,9 +191,7 @@
 
 + (NSString*)dbarcodeFileSourcePathIn:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity{
 	NSString *D_BarcodeSourceDir = [self D_BarcodeSourceRootDirIn:picDirPath];
-	NSString *path = [D_BarcodeSourceDir stringByAppendingString:[NSString stringWithFormat:@"%d/*",(int)entity.merchantID]];
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSAssert([fileManager fileExistsAtPath:path], @"无效的地址");
+	NSString *path = [D_BarcodeSourceDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%d/*",(int)entity.merchantID]];
 	return path;
 }
 

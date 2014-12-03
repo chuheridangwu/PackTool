@@ -79,11 +79,11 @@ enum{
 	NSArray *configDatas = [TxtparseOBJ parseDataFrom:string itemSeparator:@"\n" elementSeparator:@"\t"];
 	for (NSArray *comps in configDatas) {
 		NSInteger cmpCounts = [comps count];
-		NSAssert(cmpCounts == E_ConfigIndex_Invalid, @"解析错误或者数据有错 %@",comps);
 		NSString *name = [comps objectAtIndex:E_ConfigIndex_Name];
 		if([name hasPrefix:@"//"]){
 			continue;
 		}
+		NSAssert(cmpCounts == E_ConfigIndex_Invalid, @"解析错误或者数据有错 %@",comps);
 		
 		NSInteger merchantID = [[comps objectAtIndex:E_ConfigIndex_ID] integerValue];
 		NSString *ipaName = [comps objectAtIndex:E_ConfigIndex_IpaName];
