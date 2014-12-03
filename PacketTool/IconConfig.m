@@ -65,6 +65,12 @@
 	sourceDirPath = [Path sideSliderIconDirSourcePath:sourcePicRootPath itemEntity:entity];
 	moveItem = [NSString stringWithFormat:@"cp -rf %@ %@",[NSString stringWithFormat:@"%@/*",sourceDirPath],destDirPath];
 	system([moveItem cStringUsingEncoding:NSUTF8StringEncoding]);
+	
+	//其他的图片~
+	destDirPath = [Path otherIconDirPath:projectPath];
+	sourceDirPath = [Path otherIconDirSourcePath:sourcePicRootPath itemEntity:entity];
+	moveItem = [NSString stringWithFormat:@"cp -rf %@ %@",[NSString stringWithFormat:@"%@/*",sourceDirPath],destDirPath];
+	system([moveItem cStringUsingEncoding:NSUTF8StringEncoding]);
 #warning 拨号键盘~
 }
 

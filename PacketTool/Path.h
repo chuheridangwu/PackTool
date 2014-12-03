@@ -25,6 +25,7 @@
 + (NSString*)logRegIconFilePath:(NSString*)projectPath;//注册页面的顶部icon
 + (NSString*)sideSliderBgImageFilePath:(NSString*)projectPath;//侧边栏背景图片的位置~
 + (NSString*)sideSliderIconDirPath:(NSString*)projectPath;//侧边栏里面的Icon的地址~
++ (NSString*)otherIconDirPath:(NSString*)projectPath;//其他图标的目录地址~
 
 #pragma mark 图片文件的源地址~
 + (NSString*)iconDirSourcePathIn:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
@@ -35,6 +36,7 @@
 + (NSString*)logRegIconFileSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
 + (NSString*)sideSliderBgImageFileSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
 + (NSString*)sideSliderIconDirSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
++ (NSString*)otherIconDirSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
 
 #pragma 默认地址~
 + (NSString*)noneGuideImageDirSourcePath:(NSString*)picDirPath;

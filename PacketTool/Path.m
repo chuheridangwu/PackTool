@@ -89,6 +89,13 @@
 	return dirPath;
 }
 
++ (NSString*)otherIconDirPath:(NSString*)projectPath{
+	NSString *dirPath = [projectPath stringByAppendingPathComponent:@"/Woxin2.0/Resource/OtherPic/other"];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSAssert([fileManager fileExistsAtPath:dirPath], @"无效的地址");
+	return dirPath;
+}
+
 #pragma mark 一些文件夹的位置~
 + (NSString*)D_BarcodeSourceRootDirIn:(NSString*)picPath{
 	NSString *dir = [picPath stringByAppendingPathComponent:@"D_Barcode"];
@@ -292,6 +299,28 @@
 				break;
 			case E_App_Category_Public:
 				dirPath = [self sideSliderIconDirSourcePath:picDirPath merchantID:10020];
+				break;
+		}
+	}
+	NSAssert([fileManager fileExistsAtPath:dirPath], @"无效的地址");
+	return dirPath;
+}
+
++ (NSString*)otherIconDirSourcePath:(NSString*)picDirPath merchantID:(NSInteger)merchantID{
+	NSString *filePath = [picDirPath stringByAppendingPathComponent:[NSString stringWithFormat:@"OtherIcon/%d",(int)merchantID]];
+	return filePath;
+}
+
++ (NSString*)otherIconDirSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity{
+	NSString *dirPath = [self otherIconDirSourcePath:picDirPath merchantID:entity.merchantID];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath:dirPath]){
+		switch (entity.appCategory){
+			case E_App_Category_Eatable:
+				dirPath = [self otherIconDirSourcePath:picDirPath merchantID:10001];
+				break;
+			case E_App_Category_Public:
+				dirPath = [self otherIconDirSourcePath:picDirPath merchantID:10020];
 				break;
 		}
 	}

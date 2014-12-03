@@ -10,7 +10,8 @@
 #define PacketTool_CustomFilePath_h
 
 //此为必须填的选项
-#define D_CODE_SOURCE_PROJECT_DIR_PATH @"/Users/Elty/Desktop/Woxin2.0" //工程的文件夹位置
+//@"/Users/Elty/Desktop/Woxin2.0"
+#define D_CODE_SOURCE_PROJECT_DIR_PATH @"/Users/Elty/Documents/Project/woxin_ios_v2/Woxin2.0" //工程的文件夹位置
 //图片的位置
 #define D_ICON_DIR_PATH	 @"/Users/Elty/Desktop/packetTool/Picture"	//软件的相关小图片的文件夹位置
 //ipa包的位置
