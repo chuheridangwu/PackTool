@@ -162,7 +162,6 @@
 				dirPath = [self appIconPathAtSourcePathIn:picDirPath merchantID:10020];
 				break;
 		}
-		return nil;
 	}
 	NSAssert([fileManager fileExistsAtPath:dirPath], @"无效的地址");
 	return dirPath;

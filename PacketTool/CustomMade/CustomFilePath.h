@@ -11,12 +11,12 @@
 
 //此为必须填的选项
 //@"/Users/Elty/Desktop/Woxin2.0"
-#define D_CODE_SOURCE_PROJECT_DIR_PATH @"/Users/Elty/Documents/Project/woxin_ios_v2/Woxin2.0" //工程的文件夹位置
+#define D_CODE_SOURCE_PROJECT_DIR_PATH @"/Users/Elty/Desktop/Woxin2.0" //工程的文件夹位置
 //图片的位置
-#define D_ICON_DIR_PATH	 @"/Users/Elty/Desktop/packetTool/Picture"	//软件的相关小图片的文件夹位置
+#define D_ICON_DIR_PATH	 @"/Users/Elty/Documents/Project/packetTool/Picture"	//软件的相关小图片的文件夹位置
 //ipa包的位置
 #define D_IPAS_DIR_PATH @"/Users/Elty/Desktop/IPAS" // 所有Ipa包存放的位置
 //版本号
-#define D_IPA_DEFAULT_ALL_VERSION @"2.1.20.0" //默认的版本号
+#define D_IPA_DEFAULT_ALL_VERSION @"2.1.19.2" //默认的版本号
 
 #endif
