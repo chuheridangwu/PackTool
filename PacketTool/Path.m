@@ -340,13 +340,13 @@
 
 #pragma mark ipa包的地址~
 + (NSString*)ipaDirPathAt:(NSString*)ipasPath itemEntity:(ConfigEntity*)entity{
-	NSString *path = [ipasPath stringByAppendingPathComponent:entity.merchantName];
+	NSString *path = [ipasPath stringByAppendingPathComponent:@"IPA"];
 	return path;
 }
 
 + (NSString*)ipaFilePathAt:(NSString*)ipasPath itemEntity:(ConfigEntity*)entity{
 	NSString *direct = [self ipaDirPathAt:ipasPath itemEntity:entity];
-	NSString *fileName = [NSString stringWithFormat:@"%d.ipa",(int)entity.merchantID];
+	NSString *fileName = [NSString stringWithFormat:@"wx_%d.ipa",(int)entity.merchantID];
 	NSString *path = [direct stringByAppendingPathComponent:fileName];
 	return path;
 }
@@ -363,7 +363,7 @@
 
 + (NSString*)ipaPlistPathAt:(NSString*)ipasPath itemEntity:(ConfigEntity*)entity{
 	NSString *direct = [self ipaDirPathAt:ipasPath itemEntity:entity];
-	NSString *fileName = [NSString stringWithFormat:@"%d.plist",(int)entity.merchantID];
+	NSString *fileName = [NSString stringWithFormat:@"wx_%d.plist",(int)entity.merchantID];
 	NSString *path = [direct stringByAppendingPathComponent:fileName];
 	return path;
 }
