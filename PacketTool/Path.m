@@ -201,20 +201,33 @@
 	return path;
 }
 
++ (NSString*)guideImageDirSourcePath:(NSString*)picDirPath merchanteID:(NSInteger)merchantID{
+	NSString *guideRootDir = [self guideSourceRootDirIn:picDirPath];
+	NSString *guideDir = [guideRootDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%d",(int)merchantID]];
+	return guideDir;
+}
+
 + (NSString*)guideImageDirSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity{
 	NSString *guideDir = nil;
 	if (!entity.isGuideEnable){
 		guideDir = [self noneGuideImageDirSourcePath:picDirPath];
 	}else{
 		NSInteger merchantID = entity.merchantID;
-		if (entity.appCategory == E_App_Category_Eatable){
-			merchantID = 10001;
+		guideDir = [self guideImageDirSourcePath:picDirPath merchanteID:merchantID];
+		NSFileManager *fileManager = [NSFileManager defaultManager];
+		if (![fileManager fileExistsAtPath:guideDir]){
+			switch (entity.appCategory){
+					case E_App_Category_Eatable:
+					merchantID = 10001;
+					break;
+					case E_App_Category_Public:
+					merchantID = 10020;
+					break;
+			}
 		}
-		NSString *guideRootDir = [self guideSourceRootDirIn:picDirPath];
-		guideDir = [guideRootDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%d",(int)merchantID]];
+		guideDir = [self guideImageDirSourcePath:picDirPath merchanteID:merchantID];
+		NSAssert([fileManager fileExistsAtPath:guideDir], @"无效的地址");
 	}
-	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSAssert([fileManager fileExistsAtPath:guideDir], @"无效的地址");
 	return guideDir;
 }
 
