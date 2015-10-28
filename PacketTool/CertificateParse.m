@@ -72,6 +72,10 @@ enum{
             continue;
         }
         NSString *name = [comps objectAtIndex:E_CertificateIndex_Name];
+		if([name hasPrefix:@"//"]){
+			continue;
+		}
+		
         NSInteger merchantID = [[comps objectAtIndex:E_CertificateIndex_ID] integerValue];
         NSString *certificate = [comps objectAtIndex:E_CertificateIndex_Cert];
 		NSString *bundleID = [comps objectAtIndex:E_CertificateIndex_BundleID];

@@ -16,6 +16,8 @@
     [_version release];
     [_appURL release];
 	[_bundleID release];
+    [_findName release];
+    [_jpush_key release];
     [super dealloc];
 }
 

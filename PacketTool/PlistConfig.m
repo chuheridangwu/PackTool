@@ -20,12 +20,15 @@
     [plistDic setObject:version forKey:@"CFBundleShortVersionString"];
 	[plistDic setObject:entity.bundleID forKey:@"CFBundleIdentifier"];
 	
-	//alischemes
-	NSString *urlSchemes = [NSString stringWithFormat:@"AliMobilePay%d",(int)entity.merchantID];
-	NSArray *urlTypes = [plistDic objectForKey:@"CFBundleURLTypes"];
-	NSMutableDictionary *aliDic = [urlTypes objectAtIndex:0];
-	[aliDic setObject:[NSArray arrayWithObject:urlSchemes] forKey:@"CFBundleURLSchemes"];
-	
+    //alischemes
+    NSString *urlSchemes = [NSString stringWithFormat:@"AliMobilePay%d",(int)entity.merchantID];
+    NSArray *urlTypes = [plistDic objectForKey:@"CFBundleURLTypes"];
+    NSMutableDictionary *aliDic = [urlTypes objectAtIndex:0];
+    [aliDic setObject:[NSArray arrayWithObject:urlSchemes] forKey:@"CFBundleURLSchemes"];
+    
+    NSMutableDictionary *weixinDic = [urlTypes objectAtIndex:1];
+    [weixinDic setObject:[NSArray arrayWithObject:entity.sharedID] forKey:@"CFBundleURLSchemes"];
+    
     [plistDic writeToFile:plistPath atomically:NO];
     NSLog(@"配置plist文件 版本号为:%@, app名称为:%@ alipayURLSchemes=%@",version,entity.merchantName,urlSchemes);
 }

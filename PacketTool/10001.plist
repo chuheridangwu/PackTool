@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://yun.67call.com/Ios/10001.ipa</string>
+					<string>http://yun.67call.com/Ios/2.ipa</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.wx.companyExplicit.woxin</string>
+				<string>com.wx.companyExplicit.wxt</string>
 				<key>bundle-version</key>
-				<string>2.1.7.0</string>
+				<string>2.0.9.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>我信</string>
+				<string>我信通</string>
 			</dict>
 		</dict>
 	</array>

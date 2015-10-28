@@ -16,7 +16,7 @@
 + (void)configAt:(NSString*)projectFilePath withConfigEntity:(ConfigEntity*)entity{
     CertificateEntity *certificateEntity = [[CertificateParse sharedCertificateParse] certificateStringForMerchantID:entity.merchantID];
     NSAssert(certificateEntity, @"没有查到相应的证书");
-	[entity setBundleID:certificateEntity.bundleID];
+    [entity setBundleID:certificateEntity.bundleID];
     
     NSString *certificatePath = [Path certificatePathIn:projectFilePath];
     NSMutableDictionary *citificateDic = [NSMutableDictionary dictionaryWithContentsOfFile:certificatePath];
@@ -24,7 +24,7 @@
     for (NSMutableDictionary *buildSettingDic in releaseDicArray){
         [buildSettingDic setObject:certificateEntity.certificate forKey:@"PROVISIONING_PROFILE"];
     }
-    [citificateDic writeToFile:certificatePath atomically:NO];
+//    [citificateDic writeToFile:certificatePath atomically:NO];
 }
 
 + (NSArray*)releaseBuildSettingDicInDic:(NSMutableDictionary*)dic{
