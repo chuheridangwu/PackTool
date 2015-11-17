@@ -31,6 +31,12 @@
     NSString *guideDirPath = [Path guideImageDirSourcePath:sourcePicRootPath itemEntity:entity];
     moveItem = [NSString stringWithFormat:@"cp -rf %@ %@",guideDirPath,guideFilePath];
     system([moveItem cStringUsingEncoding:NSUTF8StringEncoding]);
+    
+    //启动页
+    NSString *linkPageFilePath = [Path linkPageImageDirPath:projectPath];
+    NSString *linkDirPath = [Path linkPageImageSourcePath:sourcePicRootPath itemEntity:entity];
+    moveItem = [NSString stringWithFormat:@"cp -rf %@ %@",linkDirPath,linkPageFilePath];
+    system([moveItem cStringUsingEncoding:NSUTF8StringEncoding]);
 }
 
 @end

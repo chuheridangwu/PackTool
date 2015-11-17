@@ -21,11 +21,13 @@
 + (NSString*)iconDirpathIn:(NSString*)projectPath;    //APP的logo位置
 + (NSString*)dbarcodeFilePathIn:(NSString *)projectPath;//二维码的位置
 + (NSString*)guideImageDirPath:(NSString*)projectPath;  //引导页的位置
++ (NSString*)linkPageImageDirPath:(NSString*)projectPath; //启动页的位置
 
 #pragma mark 图片文件的源地址~
 + (NSString*)iconDirSourcePathIn:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
 + (NSString*)dbarcodeFileSourcePathIn:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
 + (NSString*)guideImageDirSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
++ (NSString*)linkPageImageSourcePath:(NSString*)picDirPath itemEntity:(ConfigEntity*)entity;
 
 #pragma mark 打包后的ipa以及plist的路径
 + (NSString*)ipaDirPathAt:(NSString*)ipasPath itemEntity:(ConfigEntity*)entity;

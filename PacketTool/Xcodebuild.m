@@ -17,7 +17,7 @@
     NSString *projectPath = D_CODE_SOURCE_PROJECT_DIR_PATH;
     NSString *cd = [NSString stringWithFormat:@"cd %@",projectPath];
     NSString *clean = [NSString stringWithFormat:@"/usr/bin/xcodebuild -workspace RKWXT.xcworkspace -scheme RKWXT clean"];
-    NSString *build = [NSString stringWithFormat:@"/usr/bin/xcodebuild -workspace RKWXT.xcworkspace -scheme RKWXT -sdk iphoneos build archive"];
+    NSString *build = [NSString stringWithFormat:@"/usr/bin/xcodebuild -workspace RKWXT.xcworkspace -scheme RKWXT.x -sdk iphoneos build archive"];
     //NSString *build = [NSString stringWithFormat:@"/usr/bin/xcodebuild -configuration \"Release\" -target %@ build",D_TargetName];
 //    NSString *build = [NSString stringWithFormat:@"/usr/bin/xcodebuild -workspace RKWXT.xcworkspace -scheme RKWXT"];
     NSString *ipaPath = [Path ipaFilePathAt:D_IPAS_DIR_PATH itemEntity:configEntity];

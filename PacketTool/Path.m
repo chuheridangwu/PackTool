@@ -63,6 +63,13 @@
     return dirPath;
 }
 
++(NSString*)linkPageImageDirPath:(NSString *)projectPath{
+    NSString *dirPath = [projectPath stringByAppendingPathComponent:@"RKWXT/Resources/AppStartImg"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSAssert([fileManager fileExistsAtPath:dirPath], @"无效的地址");
+    return dirPath;
+}
+
 + (NSString*)iconSourceRootDirIn:(NSString*)picPath{
     NSString *dir = [picPath stringByAppendingPathComponent:@"Icon"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -104,6 +111,15 @@
     return path;
 }
 
++(NSString*)linkPageImageSourcePath:(NSString *)picDirPath itemEntity:(ConfigEntity *)entity{
+    NSString *linkPageDir = [self linkSourceRootDirIn:picDirPath];
+    NSString *path = [linkPageDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%d/*",100000]];
+    if(entity.merchantID == 10198 || entity.merchantID == 10135){
+        path = [linkPageDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%d/*",(int)entity.merchantID]];
+    }
+    return path;
+}
+
 #pragma mark 一些文件夹的位置~
 + (NSString*)D_BarcodeSourceRootDirIn:(NSString*)picPath{
     NSString *dir = [picPath stringByAppendingPathComponent:@"D_Barcode"];
@@ -114,6 +130,13 @@
 
 + (NSString*)guideSourceRootDirIn:(NSString*)picPath{
     NSString *dir = [picPath stringByAppendingPathComponent:@"Guide"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSAssert([fileManager fileExistsAtPath:dir], @"无效的地址");
+    return dir;
+}
+
++ (NSString*)linkSourceRootDirIn:(NSString*)picPath{
+    NSString *dir = [picPath stringByAppendingPathComponent:@"StartImg"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSAssert([fileManager fileExistsAtPath:dir], @"无效的地址");
     return dir;
